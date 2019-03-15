@@ -19,7 +19,7 @@ All the following methods are exposed as both sockets.io commands and REST (POST
 All received data must be formatted as JSON.
 
 
-## Commands
+## In game commands
 
 ### Path
 
@@ -27,4 +27,38 @@ All received data must be formatted as JSON.
 http://<IP>/command  (REST)
 
 socketsio.emit('command', BODY)   (SOCKETS.IO)
+```
+
+
+### Body
+```
+{
+	"key": // string, mandatory (your player key)
+	"commands": {
+    // dictionary, mandatory
+    // must specify **only one** property
+    // values are boolean (specify if a key becomes pressed or released)
+		"up": // bool
+    "down": // bool,
+    "left": // bool,
+    "right": // bool,
+    "front_punch": // bool,
+    "back_punch": // bool,
+    "front_kick": // bool,
+    "back_kick": // bool,
+    "interact": // bool,
+    "throw": // bool,
+    "block": // bool,
+	}
+}
+```
+
+### Example
+```
+{
+	"key": "123456789",
+	"commands": {
+		"up": true
+	}
+}
 ```
