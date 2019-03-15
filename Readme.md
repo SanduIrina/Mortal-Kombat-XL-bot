@@ -18,6 +18,7 @@ All the following methods are exposed as both sockets.io commands and REST (POST
 
 All received data must be formatted as JSON.
 
+Both REST and Sockets.io servers accept the same body format.
 
 ## In game commands
 
@@ -34,22 +35,22 @@ socketsio.emit('command', BODY)   (SOCKETS.IO)
 ```
 {
 	"key": // string, mandatory (your player key)
-	"commands": {
-    // dictionary, mandatory
-    // must specify **only one** property
-    // values are boolean (specify if a key becomes pressed or released)
-		"up": // bool
-    "down": // bool,
-    "left": // bool,
-    "right": // bool,
-    "front_punch": // bool,
-    "back_punch": // bool,
-    "front_kick": // bool,
-    "back_kick": // bool,
-    "interact": // bool,
-    "throw": // bool,
-    "block": // bool,
-	}
+  "commands": {
+      // dictionary, mandatory
+      // must specify **only one** property
+      // values are boolean (specify if a key becomes pressed or released)
+      "up": // bool
+      "down": // bool,
+      "left": // bool,
+      "right": // bool,
+      "front_punch": // bool,
+      "back_punch": // bool,
+      "front_kick": // bool,
+      "back_kick": // bool,
+      "interact": // bool,
+      "throw": // bool,
+      "block": // bool,
+    }
 }
 ```
 
