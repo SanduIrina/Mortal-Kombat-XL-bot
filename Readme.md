@@ -34,7 +34,7 @@ socketsio.emit('command', BODY)   (SOCKETS.IO)
 ### Body
 ```
 {
-	"key": // string, mandatory (your player key)
+  "key": // string, mandatory (your player key)
   "commands": {
       // dictionary, mandatory
       // must specify **only one** property
