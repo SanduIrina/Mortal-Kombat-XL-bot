@@ -1,3 +1,6 @@
+Short example of stream client.
+
+
 # Usage:
 
 After configuring your dependencies and configuring the stream parameters (see stream_config API), run
@@ -20,3 +23,15 @@ After installing Python & Pip, run
 pip install Pillow
 pip install opencv-python
 ```
+
+# Short explanation
+
+Packets are sent over UDP. Each frame packet also contains the following information:
+
+- Current frame number
+
+- Current packet number
+
+- Max number of packets
+
+- The resized ratio the server used for the current frame (you must specify this when configuring your stream, see /stream_config API)
