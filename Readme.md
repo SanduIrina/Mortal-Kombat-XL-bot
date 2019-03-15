@@ -57,9 +57,9 @@ socketsio.emit('command', BODY)   (SOCKETS.IO)
 ### Example
 ```
 {
-	"key": "123456789",
-	"commands": {
-		"up": true
-	}
+  "key": "123456789",
+  "commands": {
+    "up": true
+  }
 }
 ```
