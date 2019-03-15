@@ -291,4 +291,3 @@ http://<IP>/get_status  (REST)
   "key": "123456789"
 }
 ```
-### Notes
