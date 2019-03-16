@@ -9,7 +9,7 @@ sock = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
 
 data = ''
-payload_size = struct.calcsize("L")
+payload_size = struct.calcsize(">L")
 
 curFrame = -1
 lastFrame = -1
@@ -25,7 +25,7 @@ def initFrameFragments():
 
 def decodeData(p):
     packed_msg_size = p[:payload_size]
-    msg_size = struct.unpack("L", packed_msg_size)[0]
+    msg_size = struct.unpack(">L", packed_msg_size)[0]
     res = p[payload_size:]
     return pickle.loads(res)
 
