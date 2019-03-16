@@ -1,4 +1,4 @@
-Short example of stream client.
+A short example of a video streaming client implementation.
 
 
 # Usage:

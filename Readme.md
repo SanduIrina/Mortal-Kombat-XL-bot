@@ -20,6 +20,8 @@ All received data must be formatted as JSON.
 
 Both REST and Sockets.io servers accept the same body format.
 
+During the final championship, any manual request is prohibited once champion selection phase ends.
+
 ## In game commands
 
 ### Path
@@ -104,8 +106,7 @@ socketsio.emit('player_select', BODY)   (SOCKETS.IO)
 
 You can only play with the default champion style.
 
-You're not forced to implement this, you can just send it as a Postman request.
-
+During the final championship, you can send this request manually using tools like Postman.
 ## Stream config
 
 Use this to specify where the stream servers should send frames to.
@@ -154,6 +155,8 @@ Lower resolution = more, faster frames
 Higher resolution = fewer, slower frames
 
 Your downscale factor will not impact the other player's streaming performance in any way.
+
+During the final championship, you can send this request manually using tools like Postman, until the champion select phase ends.
 
 ## Admin commands
 
