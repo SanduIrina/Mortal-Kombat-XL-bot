@@ -1,3 +1,9 @@
+Our implementation of a bot for Mortal Kombat XL. A server runs the game and sends a video stream to the bot. The bot sends commands via socket.io back to the server.
+We used OpenCV to detect where the fighters are on the screen, then decided what actions to take based on the distance between them.
+
+Following is the competition's original README.
+
+
 # Problem statement
 
 See https://docs.google.com/document/d/1IWDF3L83Ozi81bvt2E3cWb77NnCV01m3ABiAlqw71Lc/edit?usp=sharing
